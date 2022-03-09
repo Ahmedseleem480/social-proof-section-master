@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    --primary-Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --primary-Soft-Pink: hsl(333, 80%, 67%);
+    --Neutral-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Neutral-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --Neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+    Font-size: 15px;
+    background-image: url(images/bg-pattern-top-desktop.svg);
+}
+
+.container {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.upper-left {
+    width: 50%;
+    height: 100%;
+    padding: clamp(0.5rem , 1.5rem , 2rem) 0 0 clamp(0.5rem , 2rem , 2rem);
+}
+
+.upper-left h1 {
+    width: clamp(25ch , 50ch , 60ch);
+    margin: 60px 0 0 60px;
+    padding: 5px 5px 3px 5px;
+    font-size: 4rem;
+    font-family: spartan;
+    color: var(--primary-Very-Dark-Magenta);
+    font-weight: 700;
+}
+
+.upper-left p {
+    width: 50ch;
+    margin: 0 0 0 60px;
+    padding: 5px;
+    line-height: 22px;
+    font-size: 1.8rem;
+    color: var(--Neutral-Dark-Grayish-Magenta)
+}
+
+.upper-right {
+    position: relative;
+    align-self: center;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    padding: 0 60px 0 0
+}
+
+.upper-right > div {
+    width: 65%;
+    height: 50px;
+    background-color: var(--Neutral-Light-Grayish-Magenta);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    font-family: Spartan;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-Very-Dark-Magenta);
+}
+
+#upper-ch-one {
+    position: absolute;
+    top: 15px;
+    left: 10px;    
+}
+#upper-ch-two {
+    position: absolute;
+    top: 80px;
+    left: 45px;
+}
+#upper-ch-three {
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+}
+
+.lower-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lower-container > div {
+    border-radius: 15px;
+    width: 28%;
+    height: 70%;
+    background-color: var(--primary-Very-Dark-Magenta);
+}
+
+.lower-container > div img {
+    border-radius: 50%;
+    margin: 35px 0 0 40px;
+    width: 60px;
+    height: 60px;
+    font-family: Spartan ,sans-serif;
+}
+.lower-container > div  h1 {
+    display: inline-block;
+    margin: 46px 0 5px 25px;
+    color: var(--Neutral-white);
+    font-size: 1.5rem;
+    font-family: Spartan ,sans-serif;
+    font-weight: 700;
+}
+
+.lower-container > div span {
+    font-size: 1.4rem;
+    color: var(--primary-Soft-Pink);
+    margin: 0 0 0 25px;
+    padding-top: 5px;
+    font-family: Spartan, sans-serif;
+    font-weight: 300;
+}
+
+.lower-container > div p {
+    color: var(--Neutral-white);
+    padding: 2rem 1rem 1rem 3.5rem;
+    font-family: Spartan, sans-serif;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-one {
+    margin-top: 0;
+    margin-left: 60px;
+}
+.box-two {
+    margin-top: 20px;
+}
+.box-three {
+    margin-top: 40px;
+    margin-right: 60px;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .upper-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .upper-left > h1 {
+        margin: 0;
+        padding: 10px;
+    }
+    .upper-left > p {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .upper-right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .upper-right > div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static !important;
+        margin-bottom: 5px;
+    }
+
+    .lower-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+}
